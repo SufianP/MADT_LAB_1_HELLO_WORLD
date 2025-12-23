@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 textView.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
             }
         });
-
+//Code for revert
         buttonBackground.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
