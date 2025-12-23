@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private Button button;
+    private Button buttonColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +19,19 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
+        buttonColor = findViewById(R.id.buttonColor);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textView.setText("Text changed by button click!");
+            }
+        });
+
+        buttonColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
             }
         });
     }
